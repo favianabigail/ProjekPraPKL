@@ -1,0 +1,188 @@
+/* menu_revisi.css - Dibuat Mirip admin_verifikasi.css */
+
+/* Reset dan dasar (Diambil dari admin_verifikasi.css) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif; /* Font Segoe UI */
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background-color: #343a40;
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+    position: fixed; /* Fixed position */
+}
+
+.sidebar h2 {
+    font-size: 22px; /* Ukuran font lebih kecil */
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: left; /* Kembalikan ke default/kiri jika mengikuti admin_verifikasi */
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px; /* Jarak lebih kecil */
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #f8f9fa; /* Warna putih lebih terang */
+    font-size: 16px;
+    /* font-weight: normal; */
+}
+
+.sidebar ul li a:hover {
+    color: #ffc107; /* Warna hover kuning/emas */
+    font-weight: normal; /* Hapus bold pada hover */
+}
+
+/* Konten utama */
+.container {
+    display: flex;
+    /* min-height: 100vh; tidak diperlukan karena body min-height sudah diatur untuk fixed sidebar */
+}
+
+main {
+    margin-left: 240px; /* Offset dari sidebar 220px + 20px padding/margin */
+    padding: 30px;
+    flex-grow: 1; /* Ganti width: 100% dengan flex-grow: 1 agar lebih fleksibel */
+}
+
+/* Judul Halaman */
+header h1 {
+    font-size: 24px; /* Menyesuaikan dengan ukuran h2 admin_verifikasi */
+    margin: 0;
+    color: #343a40;
+}
+
+/* Tombol Logout (Menyesuaikan dengan .logout-button di admin_verifikasi) */
+.logout {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 14px; /* Padding dari admin_verifikasi */
+    border-radius: 6px; /* Radius dari admin_verifikasi */
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold; /* Ditambahkan agar sama */
+    /* Header h1 dan logout di menu.css menggunakan flex, bukan absolute position */
+}
+
+.logout:hover {
+    background-color: #bb2d3b; /* Warna hover dari admin_verifikasi */
+}
+
+/* Tombol Tambah (Menggunakan gaya tombol aksi utama dari admin_verifikasi) */
+.btn-tambah {
+    display: inline-block;
+    background-color: #28a745; /* Tetap hijau, tapi disamakan padding/radius-nya */
+    color: white;
+    text-decoration: none;
+    padding: 6px 12px; /* Padding dari admin_verifikasi button */
+    margin: 20px 0;
+    border-radius: 5px; /* Radius dari admin_verifikasi button */
+    font-size: 14px; /* Ukuran font dari admin_verifikasi button */
+    transition: 0.2s;
+}
+
+.btn-tambah:hover {
+    background-color: #218838; /* Tetap warna hover hijau yang lebih gelap */
+}
+
+/* Tabel (Menggunakan gaya tabel dari admin_verifikasi) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px; /* Radius dari admin_verifikasi */
+    overflow: hidden; /* Penting untuk border-radius */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Box shadow dari admin_verifikasi */
+}
+
+th, td {
+    padding: 12px 16px; /* Padding dari admin_verifikasi */
+    border-bottom: 1px solid #dee2e6; /* Border-bottom dari admin_verifikasi */
+    border-left: none; /* Hilangkan border samping */
+    border-right: none;
+    text-align: center;
+}
+
+th {
+    background-color: #e9ecef;
+    color: #495057;
+    font-weight: 600; /* Font weight dari admin_verifikasi */
+    border-bottom: 1px solid #dee2e6; /* Pastikan border bawah tetap ada */
+}
+
+/* Gambar */
+img {
+    max-width: 80px; /* Ukuran maks dari admin_verifikasi */
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2); /* Box shadow dari admin_verifikasi */
+    width: auto; /* Ganti width 60px menjadi auto agar max-width berlaku */
+}
+
+/* Tombol Edit/Hapus (Menggunakan gaya tombol aksi umum admin_verifikasi) */
+.btn-edit,
+.btn-hapus {
+    display: inline-block;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 5px; /* Radius dari admin_verifikasi button */
+    color: white;
+    font-size: 14px;
+    transition: 0.2s;
+    margin: 2px; /* Ditambahkan agar rapi di dalam td */
+}
+
+.btn-edit {
+    background-color: #007bff;
+}
+
+.btn-edit:hover {
+    background-color: #0056b3; /* Sedikit lebih gelap dari admin_verifikasi, tapi konsisten */
+}
+
+.btn-hapus {
+    background-color: #dc3545;
+    margin-left: 2px; /* Disesuaikan dengan margin 2px di atas */
+}
+
+.btn-hapus:hover {
+    background-color: #bb2d3b;
+}
+
+/* Card Style (Ditambahkan untuk konsistensi) */
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px; /* Opsional: untuk pemisah antar card */
+}
+
+/* Hapus .header lama karena header sudah diatur di atas */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Ditambahkan untuk jarak header dan konten */
+}

@@ -1,0 +1,143 @@
+/* Reset margin, padding dan box-sizing untuk konsistensi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header dengan navigasi yang lebih baik */
+header {
+    width: 100%;
+    height: 16vh;
+    position: relative;
+    background-color: #333;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+header nav .logo img {
+    width: 90px;
+    cursor: pointer;
+    display: block;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 5px;
+}
+
+header nav ul li a:hover {
+    color: #fac031;
+    border-bottom: 2px solid #fac031;
+}
+
+/* Styling untuk halaman sukses */
+.sukses {
+    display: grid;
+    place-items: center;
+    background-color: #F6EBD2;
+    min-height: 100vh;
+    padding-top: 100px;
+}
+
+.Berhasil {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.Berhasil img {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.Berhasil h1 {
+    font-size: 2rem;
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+.Berhasil p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Tombol dengan efek hover */
+.button {
+    width: 100%;
+    background-color: #ff7f00;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Menghapus garis bawah */
+}
+
+.button:hover {
+    background-color: #e67e00;
+}
+
+
+/* Responsif: pastikan navigasi dan elemen responsif di perangkat kecil */
+@media (max-width: 768px) {
+    header nav {
+        padding: 0 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .Berhasil {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .button {
+        font-size: 14px;
+    }
+}
