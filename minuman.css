@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+}
+
+header{
+    width: 100%;
+    height: 16vh;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 5);
+    z-index: 1000;
+}
+
+header nav .logo img{
+    width: 90px;
+    cursor: pointer;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul{
+    list-style: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+header nav ul li a::after{
+    color: '';
+    width: 100%;
+    height: 2px;
+    background: #fac031;
+    transition: 0.2s linear;
+}
+
+header nav ul li a:hover::after{
+    width: 100%;
+}
+
+header nav ul li a:hover{
+    color: #fac031;
+}
+
+header nav .cart {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    margin: 25px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+header nav .cart a {
+    color: white;
+    text-decoration: none;
+}
+
+header nav .cart a:visited {
+    color: white;
+}
+
+.login-text {
+    color: white;
+    margin-right: 10px;
+    font-size: 18px;
+    text-decoration: none; 
+    transition: color 0.3s;
+}
+
+.container {
+    display: flex;
+    min-height: calc(100vh - 16vh); /* Agar container minimal setinggi viewport dikurangi header */
+}
+
+.sidebar {
+    width: 25%;
+    background-color: #ffe4e1;
+    padding: 20px;
+    min-height: calc(100vh - 16vh); /* Sidebar selalu full height */
+}
+
+.sidebar input[type="text"] {
+    width: calc(100% - 40px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.sidebar button {
+    position:static;
+    right: 30px;
+    top: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar button i {
+    color: black;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 10px;
+    background-color: #ffb6c1;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #000;
+    transition: all 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #ff69b4;
+    transform: translateX(5px);
+}
+
+.main-content {
+    width: 75%;
+    background-color: #fff8dc;
+    padding: 20px;
+    min-height: calc(100vh - 16vh); /* Main content selalu full height meskipun konten sedikit */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.grid-item h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.grid-item p {
+    color: #ff0000;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-order {
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.btn-order:hover {
+    background-color: #ff8c00;
+    transform: scale(1.05);
+}
+
+.btn-disabled {
+    padding: 10px 20px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: not-allowed;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+    
+    .main-content {
+        width: 100%;
+    }
+    
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1201px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

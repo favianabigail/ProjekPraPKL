@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #fdf6e3;
+    overflow-x: hidden;
+}
+
+header{
+    width: 100%;
+    height: 16vh;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 5);
+    z-index: 1000;
+}
+
+header nav .logo img{
+    width: 90px;
+    cursor: pointer;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex; /* ⬅ penting */
+    justify-content: center; /* ⬅ agar ke tengah */
+    flex: 1; /* ⬅ supaya mengambil ruang tengah */
+    padding: 0;
+    margin: 0;
+}
+
+
+header nav ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+header nav ul li a::after{
+    color: '';
+    width: 100%;
+    height: 2px;
+    background: #fac031;
+    transition: 0.2s linear;
+}
+
+header nav ul li a:hover::after{
+    width: 100%;
+}
+
+header nav ul li a:hover{
+    color: #fac031;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 100px auto 20px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 30px;
+}
+
+.menu {
+    flex: 3;
+}
+
+.menu .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-item form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item form button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cart-item form button:hover {
+    background-color: #ddd;
+}
+
+.btn-delete {
+    background-color: red;
+    color: red;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.checkout-section {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.btn-checkout {
+  background-color: #e67e22;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.btn-checkout:hover {
+  background-color: #e67e22;
+}
+
+
+.cart-item form span {
+    min-width: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.item-name {
+    flex: 2; 
+    font-weight: bold;
+}
+
+.quantity-form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quantity-form button {
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+.quantity {
+    min-width: 20px;
+    text-align: center;
+}
+
+.subtotal {
+    flex: 1;
+    text-align: right;
+    font-weight: bold;
+}
+
+.summary {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+.total h2, .table-number h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.total p {
+    color: red;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.table-number div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.table-number button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.table-number button:hover {
+    background-color: #ddd;
+}
+
+.checkout {
+    background-color: #ff7f0e;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.checkout:hover {
+    background-color: #e66a00;
+}
+
+.table-number button.active {
+    background-color: #27ae60;
+    color: white;
+}
+

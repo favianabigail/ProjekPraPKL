@@ -1,0 +1,128 @@
+/* Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Body Styling */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(img/login.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  /* Login Box */
+  .login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 440px;
+    height: 480px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Header */
+  .login-header {
+    text-align: center;
+    margin: 20px 0 40px 0;
+  }
+  
+  .login-header header {
+    color: #333;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  
+  /* Input Box */
+  .input-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    margin-bottom: 30px;
+  }
+  
+  .input-box .input-field {
+    width: 100%;
+    height: 60px;
+    font-size: 17px;
+    padding: 0 25px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .input-box .input-field:focus {
+    transform: scale(1.02);
+  }
+  
+  /* Placeholder Style */
+  ::placeholder {
+    font-weight: 500;
+    color: #555;
+  }
+  
+  /* Forgot Password */
+  .forgot {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #444;
+  }
+  
+  .input-submit {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .input-submit input[type=submit] {
+    width: 100%;
+    height: 60px;
+    background: #222;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .input-submit input[type=submit]:hover {
+    background: #000;
+    transform: scale(1.03);
+  }
+  
+  /* Sign-up Link */
+  .sign-up-link {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 25px;
+  }
+  
+  .sign-up-link a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .sign-up-link a:hover {
+    text-decoration: underline;
+  }
+  
